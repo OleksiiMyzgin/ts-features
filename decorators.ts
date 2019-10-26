@@ -1,4 +1,5 @@
 class Boat {
+    @testDecorator
     color: string = 'red';
 
     get formattedColor(): string {
@@ -11,6 +12,13 @@ class Boat {
         console.log('swish')
     }
 
+}
+
+function testDecorator(target: any, key: string) {
+    // console.log('target', target[key]);
+    // console.log('target', target.color);
+    console.log('target', target);
+    console.log('key', key);
 }
 
 function logError(errorMessage: string) {
@@ -27,7 +35,7 @@ function logError(errorMessage: string) {
     }
 }
 
-new Boat().pilot();
+// new Boat().pilot();
 
 // testDecorator(Boat.prototype, 'pilot')
 
