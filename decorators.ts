@@ -16,3 +16,15 @@ function testDecorator(target: any, key: string): void {
     console.log('Target', target);
     console.log('Key', key);
 }
+
+// testDecorator(Boat.prototype, 'pilot')
+
+// decorator function
+
+// var __decorate = function(decorators, target, key, desc) {
+//     var desc = Object.getOwnPropertyDescriptor(target, key);
+
+//     for (var decorator of decorators) {
+//         decorator(target, key, desc);
+//     }
+// }
